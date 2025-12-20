@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+.gitignore.save
+
+# Python
+__pycache__/
+*.pyc
+
+# Environments
+venv/
+.env/
+
+# ML artifacts (never commit)
+models/
+data/
+vectorstore/
+
+# Logs
+*.log
+
