@@ -87,16 +87,15 @@ Healthcare-Chatbot/
 │ ├── llama-2-7b-chat.ggmlv3.q4_0.bin
 │ └── llama-2-7b-chat.ggmlv3.q8_0.bin
 │
-├── scripts/ # Core application logic
-│ ├── app.py # Main Streamlit chatbot application
-│ ├── config.py # Central configuration file
-│ ├── diagnose.py # System diagnostics and health checks
-│ ├── gpu_config.py # GPU detection and configuration
-│ ├── gpu_monitor.py # Runtime GPU monitoring
-│ ├── ingest.py # Document ingestion & vectorization pipeline
-│ └── test_evaluation.py # Evaluation and performance testing
+├──app.py # Main Streamlit chatbot application
+├── config.py # Central configuration file
+├── diagnose.py # System diagnostics and health checks
+├── gpu_config.py # GPU detection and configuration
+├── gpu_monitor.py # Runtime GPU monitoring
+├── ingest.py # Document ingestion & vectorization pipeline
+├── test_evaluation.py # Evaluation and performance testing
 │
-├── vectorstore/
+├── vectorstore/ # dbstore (ignored by git)
 │ └── db_faiss/ # FAISS vector database (generated)
 │ ├── index.faiss
 │ └── index.pkl
