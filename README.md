@@ -1,6 +1,21 @@
-# Enhanced Medical AI Chatbot
+# Healthcare Chatbot — GenAI-Powered Medical Information Assistant
 
-A production-ready medical chatbot leveraging **LLaMA 2**, **RAG (Retrieval-Augmented Generation)**, and **FAISS vector database** with a modern Streamlit interface.
+## Overview
+The Healthcare Chatbot is a GenAI-powered medical information assistant built using a Retrieval-Augmented Generation (RAG) architecture. It combines large language models with semantic document retrieval to generate accurate, context-aware, and grounded responses from trusted medical literature.
+
+This project demonstrates strong foundations in GenAI system design, vector search, prompt engineering, and local model deployment.
+
+---
+
+## Problem Statement
+Medical information is often:
+- Buried inside large and unstructured documents
+- Difficult to search contextually
+- Prone to hallucinations when queried using standalone LLMs
+
+This project addresses these challenges by grounding LLM responses in verified medical documents using semantic search.
+
+---
 
 ## Key Features
 
@@ -12,36 +27,84 @@ A production-ready medical chatbot leveraging **LLaMA 2**, **RAG (Retrieval-Augm
 - **Real-time Performance Metrics**: Track response times and confidence scores
 - **Source Attribution**: Every answer includes document references
 - **Interactive Streamlit UI**: User-friendly interface with visualizations
+  
+---
 
 ### Performance Monitoring
 - Response time tracking
 - Confidence score analysis
 - Query history and analytics
 - Visual performance dashboards
+  
+---
+
+## Solution
+The system follows a Retrieval-Augmented Generation pipeline:
+1. Medical documents are ingested and chunked
+2. Chunks are converted into embeddings
+3. Embeddings are stored in a vector database
+4. Relevant context is retrieved at query time
+5. An LLM generates a grounded response using retrieved context
+
+This approach improves factual accuracy and transparency.
+
+---
+
+## Technology Stack
+- Language Model: LLaMA 2 (GGML format)
+- Embeddings: Sentence Transformers
+- Vector Database: FAISS
+- Frameworks: Python, LangChain
+- UI: Streamlit
+- Deployment: Local CPU / GPU (configurable)
+
+---
 
 ## Project Structure
 
 ```
-medical-chatbot/
-├── app.py                      # Main Streamlit application
-├── ingest.py                   # Document ingestion pipeline
-├── requirements.txt            # Python dependencies
-├── README.md                   # This file
+Healthcare-Chatbot/
+├── .venv/ # Python virtual environment (local)
 │
-├── data/                       # Medical PDF documents
-│   └── medical_book.pdf
+├── data/ # Medical reference documents (not tracked)
+│ ├── The_GALE_ENCYCLOPEDIA_of_Medicine_.pdf
+│ └── The-Gale-Encyclopedia-of-Medicine-.pdf
 │
-├── models/                     # LLaMA 2 model files
-│   └── llama-2-7b-chat.ggmlv3.q8_0.bin
+├── docs/ # Project documentation
+│ ├── CPU_VS_GPU_EXPLANATION.md
+│ ├── deployment_guide.md
+│ ├── GPU_IMPLEMENTATION.md
+│ ├── GPU_SETUP_INSTRUCTIONS.md
+│ ├── GPU_SETUP.md
+│ ├── GPU_STATUS.md
+│ ├── PROJECT_DOCUMENTATION.md
+│ ├── QUICK_GPU_SETUP.md
+│ ├── QUICK_START.md
+│ ├── SETUP_GUIDE.md
+│ └── TROUBLESHOOTING.md
 │
-├── vectorstore/               # FAISS vector database
-│   └── db_faiss/
-│       ├── index.faiss
-│       └── index.pkl
+├── models/ # LLaMA model binaries (ignored by git)
+│ ├── llama-2-7b-chat.ggmlv3.q4_0.bin
+│ └── llama-2-7b-chat.ggmlv3.q8_0.bin
 │
-└── docs/                      # Documentation
-    ├── architecture.md
-    └── usage_guide.md
+├── scripts/ # Core application logic
+│ ├── app.py # Main Streamlit chatbot application
+│ ├── config.py # Central configuration file
+│ ├── diagnose.py # System diagnostics and health checks
+│ ├── gpu_config.py # GPU detection and configuration
+│ ├── gpu_monitor.py # Runtime GPU monitoring
+│ ├── ingest.py # Document ingestion & vectorization pipeline
+│ └── test_evaluation.py # Evaluation and performance testing
+│
+├── vectorstore/
+│ └── db_faiss/ # FAISS vector database (generated)
+│ ├── index.faiss
+│ └── index.pkl
+│
+├── .gitignore # Git ignore rules
+├── README.md # Project overview and quick start
+├── requirements.txt # Python dependencies
+└── RUN_APP.sh # Shell script to launch the application
 ```
 
 ## Quick Start
