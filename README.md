@@ -411,10 +411,6 @@ Contributions are welcome! Please:
 - [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc/)
 - [Medical Textbooks](https://www.ncbi.nlm.nih.gov/books/)
 
-## License
-
-MIT License - see [LICENSE](LICENSE) file for details
-
 ## Contact
 
 - **Project Maintainer**: Your Name
