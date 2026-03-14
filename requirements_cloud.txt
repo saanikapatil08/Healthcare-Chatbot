@@ -1,0 +1,13 @@
+# Cloud-optimized requirements for Streamlit Cloud deployment
+# Lightweight dependencies that work within resource limits
+
+# Core
+streamlit==1.29.0
+groq==0.4.2
+
+# Visualization
+plotly==5.18.0
+pandas==2.1.4
+
+# Utilities
+pydantic==2.5.2
