@@ -1,50 +1,13 @@
-# Core Dependencies
+# Cloud-optimized requirements for Streamlit Cloud deployment
+# Lightweight dependencies that work within resource limits
+
+# Core
 streamlit==1.29.0
-langchain==0.0.350
-python-dotenv==1.0.0
+groq==0.4.2
 
-# LLM and Transformers
-ctransformers==0.2.27  # Fallback for CPU
-sentence-transformers==2.2.2
-huggingface-hub==0.19.4
-transformers==4.35.0  # For GPU acceleration
-accelerate==0.24.1  # For GPU optimization
-bitsandbytes==0.41.0  # For quantization (optional)
-
-# Vector Database
-faiss-cpu==1.7.4
-
-# Document Processing
-pypdf==3.17.1
-PyPDF2==3.0.1
-
-# Data Visualization
+# Visualization
 plotly==5.18.0
 pandas==2.1.4
 
 # Utilities
-tqdm==4.66.1
 pydantic==2.5.2
-psutil==5.9.6
-
-# Testing and Evaluation
-matplotlib==3.7.2
-seaborn==0.12.2
-
-# GPU Support (Optional - for Linux/Windows with NVIDIA GPUs only)
-# Note: macOS doesn't support NVIDIA CUDA. Use CPU version (default) for macOS.
-#
-# For Linux/Windows with CUDA 11.8:
-# pip install torch==2.1.0+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
-# pip install faiss-gpu==1.7.2
-#
-# For Linux/Windows with CUDA 12.1:
-# pip install torch==2.1.0+cu121 --extra-index-url https://download.pytorch.org/whl/cu121
-# pip install faiss-gpu==1.7.2
-#
-# For macOS (CPU only - already installed with torch above):
-# pip install torch torchvision torchaudio  # CPU version works on macOS
-
-# GPU Monitoring (Optional - requires NVIDIA GPU)
-# pynvml==11.5.0
-
