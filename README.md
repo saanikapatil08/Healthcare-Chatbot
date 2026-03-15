@@ -413,9 +413,9 @@ Contributions are welcome! Please:
 
 ## Contact
 
-- **Project Maintainer**: Your Name
-- **Email**: your.email@example.com
-- **GitHub**: [@yourusername](https://github.com/yourusername)
+- **Project Maintainer**: Saanika Patil
+- **Email**: spatil08@terpmail.umd.edu
+- **GitHub**: [@saanikapatil08](https://github.com/saanikapatil08)
 
 ## Acknowledgments
 
